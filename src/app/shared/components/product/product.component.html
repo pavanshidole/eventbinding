@@ -1,0 +1,57 @@
+
+
+<h2 class="text-capitalize">binding input event on input Control</h2>
+<br>
+
+<input type="text"
+(input)="onKeyForm($event)" class="form-control">
+
+<br>
+
+<h2 class="text-capitalize">binding click event on button and get info in input control</h2>
+<br>
+
+<input type="text" 
+#productName
+class="form-control mb-3 text-capitalize" placeholder="enter you name" >
+
+<button type="button"
+(click)="onBtnClick(productName)"
+class="btn btn-sm btn-primary mb-3 text-capitalize">Add productName</button>
+
+
+
+<br>
+
+<h2 class="text-capitalize">binding click event on button on hide show box</h2>
+
+    <button 
+    (click)="onShowBtn(box)"
+    class="btn btn-sm  btn-success text-white p-2 m-2 text-capitalize">show
+    </button>
+    
+
+    <button 
+    (click)="onHideBtn(box)"
+    class="btn btn-sm btn-danger text-white p-2 m-2 text-capitalize">
+    hide
+    </button>
+    
+    <button 
+    (click)="onToggleBtn(box)"
+    class="btn btn-sm btn-warning p-2 m-2 text-white text-capitalize">toggle</button>
+
+    <button 
+    (click)="onHideShowBtn(box,$event)"
+    class="btn btn-sm btn-dark text-white p-2 m-2 text-capitalize">hideshow</button>
+
+
+<div #box class="mb-3 d-none">
+
+</div>
+
+
+
+
+
+
